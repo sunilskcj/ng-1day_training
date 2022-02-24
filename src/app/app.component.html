@@ -11,16 +11,17 @@
 <div>
  <fieldset>
   <legend>Make a Choice:</legend>
-  <input type="radio" id="radioAdd" (click)="add(num1,num2)" name="calcuationChoice"> Add   
-  <input type="radio" id="radioSubtract" (click)="subtract(num1,num2)" name="calcuationChoice"> Subtract   
-  <input type="radio" id="radioMultiply"  (click)="multiply(num1,num2)" name="calcuationChoice"> Multiply   
-  <input type="radio" id="radioDivide" (click)="divide(num1,num2)"  name="calcuationChoice"> Divide   
-   
- </fieldset> 
- <div>
-  <input type="number"  [(ngModel)]="num1" placeholder="Enter your value" />
-  <input type="number"  placeholder="Enter your value" [(ngModel)]="num2">
+  <input type="radio" id="radioAdd" (change)="changeSelection(1)" name="calcuationChoice"> Add  &nbsp;&nbsp;
+  <input type="radio" id="radioSubtract" (change)="changeSelection(2)" name="calcuationChoice"> Subtract  &nbsp; &nbsp;
+  <input type="radio" id="radioMultiply"  (change)="changeSelection(3)" name="calcuationChoice"> Multiply &nbsp;  
+  <input type="radio" id="radioDivide"    (change)="changeSelection(4)"name="calcuationChoice"> Divide &nbsp; &nbsp;
+  </fieldset> 
+  <br/>
+ <div id="inputSec">
+  <input type="number"  [(ngModel)]="num1" placeholder="Enter your value"  />&nbsp;&nbsp;
+  <input type="number"  placeholder="Enter your value" [(ngModel)]="num2">&nbsp;&nbsp;
   <button type="submit" (click)="show()" >Calculate</button>
  </div>
+ <br/> <br/>
  <h1>Result : {{result}}</h1>
 </div>
