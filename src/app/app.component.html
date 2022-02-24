@@ -1,1 +1,26 @@
-<h1>Wow</h1>
+<!-- <h1>TypeScript Training</h1>
+<p >{{num}} </p>
+<button (click)="shw()">CLick</button>
+<div>
+  <span>Enter value :  </span> -->
+  <!-- <input #txtVal type="text" (change)="show(txtVal.value)"  /> -->
+  <!-- <input type="text" [(ngModel)]="name" />
+
+</div>
+<h2>{{name}}</h2> -->
+<div>
+ <fieldset>
+  <legend>Make a Choice:</legend>
+  <input type="radio" id="radioAdd" (click)="add(num1,num2)" name="calcuationChoice"> Add   
+  <input type="radio" id="radioSubtract" (click)="subtract(num1,num2)" name="calcuationChoice"> Subtract   
+  <input type="radio" id="radioMultiply"  (click)="multiply(num1,num2)" name="calcuationChoice"> Multiply   
+  <input type="radio" id="radioDivide" (click)="divide(num1,num2)"  name="calcuationChoice"> Divide   
+   
+ </fieldset> 
+ <div>
+  <input type="number"  [(ngModel)]="num1" placeholder="Enter your value" />
+  <input type="number"  placeholder="Enter your value" [(ngModel)]="num2">
+  <button type="submit" (click)="show()" >Calculate</button>
+ </div>
+ <h1>Result : {{result}}</h1>
+</div>
